@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import ChuckProvider from './context/ChuckProvider'
+import Joke from './components/Joke'
+import SavedJokes from './components/SavedJokes'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChuckProvider>
+      <div>
+        <header>
+          <h1>
+            Chuck Norris Jokes App
+          </h1>
+        </header>
+        <Joke />
+        <SavedJokes />
+      </div>
+    </ChuckProvider>
   );
 }
 
